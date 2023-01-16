@@ -239,7 +239,7 @@ fn parse(input: &str) -> Vec<Instruction> {
 
 fn get_value(value: &(Option<char>, i32), registers: &HashMap<char, i128>) -> i128 {
     match value {
-        (Some(x), _) => *registers.get(&x).unwrap(),
         (None, x) => *x as i128,
+        (Some(x), _) => *registers.get(&x).unwrap(),
     }
 }
